@@ -4,6 +4,6 @@ module com.example.piano {
     requires javafx.media;
 
 
-    opens com.example.piano to javafx.fxml;
-    exports com.example.piano;
+    opens com.flappy to javafx.fxml;
+    exports com.flappy;
 }

@@ -1,0 +1,88 @@
+.menu-pane {
+    -fx-background-color: linear-gradient(to bottom, #1e293b, #0f172a);
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+.settings-pane {
+    -fx-background-color: linear-gradient(to bottom, #1e293b, #090d16);
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+.menu-title {
+    -fx-font-size: 38px;
+    -fx-font-weight: 900;
+    -fx-text-fill: #facc15; /* Золотистий колір */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 0, 4);
+}
+.settings-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #facc15;
+    -fx-padding: 0 0 15 0;
+}
+.setting-label {
+    -fx-text-fill: #e2e8f0;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+.btn-primary {
+    -fx-background-color: linear-gradient(to right, #10b981, #059669);
+    -fx-background-radius: 12px;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px 30px;
+    -fx-cursor: hand;
+    -fx-pref-width: 220px;
+    -fx-effect: dropshadow(three-pass-box, rgba(16,185,129,0.3), 8, 0, 0, 3);
+}
+.btn-primary:hover {
+    -fx-background-color: linear-gradient(to right, #34d399, #10b981);
+}
+.btn-secondary {
+    -fx-background-color: #334155;
+    -fx-background-radius: 12px;
+    -fx-text-fill: #f1f5f9;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 25px;
+    -fx-cursor: hand;
+    -fx-pref-width: 220px;
+}
+.btn-secondary:hover {
+    -fx-background-color: #475569;
+}
+.setting-checkbox {
+    -fx-text-fill: #cbd5e1;
+    -fx-font-size: 13px;
+}
+.setting-checkbox:selected {
+    -fx-text-fill: #facc15;
+}
+.setting-combo {
+    -fx-background-color: #1e293b;
+    -fx-background-radius: 8px;
+    -fx-border-color: #475569;
+    -fx-border-radius: 8px;
+    -fx-text-fill: white;
+    -fx-pref-width: 160px;
+}
+.setting-combo .label {
+    -fx-text-fill: white;
+}
+.setting-combo .list-cell {
+    -fx-background-color: #1e293b;
+    -fx-text-fill: white;
+}
+.setting-combo .list-cell:hover {
+    -fx-background-color: #334155;
+}
+/* Футер */
+.menu-footer {
+    -fx-text-fill: #64748b;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 20 0 0 0;
+}
+.icon-style {
+    -fx-icon-code: "icm-cross"; /* Твоя настройка плагина */
+    -fx-fill: #f43f5e;          /* Можно даже покрасить крестик отдельно, например в красный */
+}

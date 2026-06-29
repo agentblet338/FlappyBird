@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<StackPane prefWidth="400" prefHeight="550" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.flappy.FlappyBirdController">
+
+    <stylesheets>
+        <URL value="@/style.css" />
+    </stylesheets>
+
+    <VBox fx:id="menuPane" alignment="CENTER" spacing="25" styleClass="menu-pane">
+        <padding>
+            <Insets top="40" right="40" bottom="40" left="40" />
+        </padding>
+        <Label text="FLAPPY BIRD" styleClass="menu-title" />
+
+        <Button text="Нова гра" onAction="#onStartGameClick" styleClass="btn-primary" />
+        <Button text="Налаштування" onAction="#onOpenSettingsClick" styleClass="btn-secondary" />
+
+        <Label text="Зроблено Арсенієм та на 25% Gemini((" styleClass="menu-footer" />
+    </VBox>
+
+    <VBox fx:id="settingsPane" visible="false" alignment="TOP_CENTER" spacing="15" styleClass="settings-pane">
+        <padding>
+            <Insets top="30" right="25" bottom="20" left="25" />
+        </padding>
+        <Label text="Налаштування" styleClass="settings-title" />
+
+        <GridPane hgap="15" vgap="15" alignment="CENTER">
+            <Label text="XXX Звук стрибка: XXX" styleClass="setting-label" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <CheckBox fx:id="chkSound" selected="true" styleClass="setting-checkbox" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+            <Label text="XXX Фонова музика: XXX" styleClass="setting-label" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <CheckBox fx:id="chkMusic" selected="true" styleClass="setting-checkbox" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <Label text="Складність:" styleClass="setting-label" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <ComboBox fx:id="listDiff" styleClass="setting-combo" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+            <Label text="Вибір фону:" styleClass="setting-label" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <ComboBox fx:id="listBg" styleClass="setting-combo" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+            <Label text="Вибір пташки:" styleClass="setting-label" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <ComboBox fx:id="listBird" styleClass="setting-combo" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        </GridPane>
+
+        <Button text="Зберегти та вийти" onAction="#onSaveSettingsClick" styleClass="btn-primary">
+            <VBox.margin>
+                <Insets top="20.0" />
+            </VBox.margin>
+        </Button>
+    </VBox>
+
+    <Pane fx:id="gamePane" visible="false" />
+
+</StackPane>
